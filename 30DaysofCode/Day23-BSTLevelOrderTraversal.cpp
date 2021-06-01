@@ -55,6 +55,7 @@ class Solution{
 		}
 	} 
 	// Output = 3 2 1 5 4 7 
+	// DFS (Depth First Search)
 	void preOrder(Node * root){
 		if (root == NULL) return;
 		if (root != NULL){
@@ -64,6 +65,7 @@ class Solution{
 		}
 	}
 	// Output = 3 2 5 1 4 7
+	// BFS (Breadth First Search)
 	void levelOrder(Node * root){
 		//Write your code here
 		// Base Case
