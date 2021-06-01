@@ -33,32 +33,48 @@ class Solution{
            return root;
            }
         }
-
-	void levelOrder(Node * root){
-      //Write your code here
-      // Base Case
-      if (root == NULL) return;
-      // Create an empty queue for level order traversal
-      queue<Node *> q;
-      // Enqueue Root and initialize height
-      q.push(root);
-      while(q.empty() == false){
-          // Print front of queue and remove it from queue
-          Node* cur = q.front(); 
-          cout << cur->data << " ";
-          q.pop();
-          /* Enqueue left child */
-          if(cur->left != NULL){
-              q.push(cur->left);
-          }
-          /*Enqueue right child */
-          if (cur->right !=NULL){
-              q.push(cur->right);
-          }
-      }
-  
+	
+	// Also Tutorials includes these function; inOrder, postOrder, preOrder
+	void inOrder(Node * root){
+		if (root == NULL) return;
+		if (root != NULL){
+			inOrder(root->left);
+			cout << root->data << " ";
+			inOrder(root->right);
+		}
+	}
+	void postOrder(Node * root){
+		if (root == NULL) return;
+		if (root != NULL){
+			inOrder(root->left);
+			inOrder(root->right);
+			cout << root->data << " ";
+		}
 	}
 
+	void levelOrder(Node * root){
+		//Write your code here
+		// Base Case
+		if (root == NULL) return;
+		// Create an empty queue for level order traversal
+		queue<Node *> q;
+		// Enqueue Root and initialize height
+		q.push(root);
+		while(q.empty() == false){
+			// Print front of queue and remove it from queue
+			Node* cur = q.front(); 
+			cout << cur->data << " ";
+			q.pop();
+			/* Enqueue left child */
+			if(cur->left != NULL){
+				q.push(cur->left);
+			}
+			/*Enqueue right child */
+			if (cur->right !=NULL){
+				q.push(cur->right);
+			}
+		}
+	}
 };//End of Solution
 int main(){
     Solution myTree;
