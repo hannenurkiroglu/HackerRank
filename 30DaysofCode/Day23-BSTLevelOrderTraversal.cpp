@@ -4,6 +4,7 @@
 #include <string>
 #include <cstdlib>
 
+/* The resulting level-order traversal is 3->2->5->1->4->7, and we print these data values as a single line of space-separated integers.*/
 using namespace std;	
 class Node{
     public:
@@ -35,6 +36,7 @@ class Solution{
         }
 	
 	// Also Tutorials includes these function; inOrder, postOrder, preOrder
+	// Output = 1 2 3 4 5 7 
 	void inOrder(Node * root){
 		if (root == NULL) return;
 		if (root != NULL){
@@ -43,6 +45,7 @@ class Solution{
 			inOrder(root->right);
 		}
 	}
+	// Output = 1 2 4 7 5 3
 	void postOrder(Node * root){
 		if (root == NULL) return;
 		if (root != NULL){
@@ -50,8 +53,17 @@ class Solution{
 			inOrder(root->right);
 			cout << root->data << " ";
 		}
+	} 
+	// Output = 3 2 1 5 4 7 
+	void preOrder(Node * root){
+		if (root == NULL) return;
+		if (root != NULL){
+			cout << root->data << " ";
+			preOrder(root->left);
+			preOrder(root->right);
+		}
 	}
-
+	// Output = 3 2 5 1 4 7
 	void levelOrder(Node * root){
 		//Write your code here
 		// Base Case
