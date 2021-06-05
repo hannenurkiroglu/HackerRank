@@ -49,7 +49,6 @@ class Student :  public Person{
                 average += score;
             }
             average /= testScores.size();
-            
             if ( average >= 90){
                 letterGrade = 'O';
             }else if (average >= 80) {
