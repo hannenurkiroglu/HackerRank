@@ -16,15 +16,13 @@ class Difference {
     Difference(vector<int> vec){
         this->elements = vec;
     }
-	// Add your code here
+    // Add your code here
     void computeDifference(){
-        
         int max = * max_element(std::begin(elements), std::end(elements));
         int min = * min_element(std::begin(elements), std::end(elements));
         
         maximumDifference = abs(max-min);
     }
-
 }; // End of Difference class
 
 int main() {
