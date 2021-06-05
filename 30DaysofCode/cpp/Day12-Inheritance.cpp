@@ -18,7 +18,6 @@ class Person{
 		void printPerson(){
 			cout<< "Name: "<< lastName << ", "<< firstName <<"\nID: "<< id << "\n"; 
 		}
-	
 };
 
 class Student :  public Person{
@@ -64,11 +63,9 @@ class Student :  public Person{
                 letterGrade = 'D';
             }else {
                 letterGrade = 'T';
-            }            
-            
+            }      
             return letterGrade;
-        }
-        
+        } 
 };
 
 int main() {
