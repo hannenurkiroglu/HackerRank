@@ -5,9 +5,7 @@
 using namespace std;
 
 //Write your code here
-
-class Calculator {
-        
+class Calculator {  
     public:
     int power(int firstint, int secondint){
         if(firstint < 0 || secondint < 0){
@@ -15,7 +13,6 @@ class Calculator {
         }
         return pow(firstint, secondint);
     }
-    
 };
 
 int main()
@@ -34,5 +31,4 @@ int main()
          }
       }
     }
-    
 }
