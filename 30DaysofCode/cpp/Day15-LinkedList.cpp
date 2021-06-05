@@ -17,7 +17,6 @@ class Solution{
       Node* insert(Node *head,int data)
       {
           //Complete this method
-          
             if (head == NULL){             // Parametre olarak girilen head NULL mu? NULL ise;
                 head = new Node(data);
             } else if(head->next == NULL){ // Parametre olarak girilen head in next i NULL mu? NULL ise;
