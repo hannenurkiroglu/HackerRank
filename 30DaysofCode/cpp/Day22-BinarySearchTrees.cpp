@@ -53,7 +53,6 @@ class Solution{
               return max(left_side, right_side);
           }
         }
-
 }; //End of Solution
 
 int main() {
@@ -73,7 +72,3 @@ int main() {
 
     return 0;
 }
-    
-       
-            
-        
