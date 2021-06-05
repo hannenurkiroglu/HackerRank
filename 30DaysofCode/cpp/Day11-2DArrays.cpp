@@ -13,17 +13,13 @@ int main()
     vector<vector<int>> arr(6);
     for (int i = 0; i < 6; i++) {
         arr[i].resize(6);
-
         for (int j = 0; j < 6; j++) {
             cin >> arr[i][j];
         }
-
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
-    
     //int sum, max = -((((unsigned int) -1)/2) + 1);
-    int sum, max = sum = getHourGlassFromArr(arr, 0, 0);
-    
+    int sum, max = sum = getHourGlassFromArr(arr, 0, 0);    
     for (int i=0; i < 4; ++i){
         for (int j=0; j < 4; ++j){
             sum = getHourGlassFromArr(arr, i,j);
@@ -32,8 +28,6 @@ int main()
             }         
         }
     }
-    
     cout << max << endl;
-
     return 0;
 }
