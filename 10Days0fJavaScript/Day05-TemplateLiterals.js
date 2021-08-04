@@ -39,7 +39,7 @@ function sides(literals, ...expressions) {
     const s1 = (p + root)/4;
     const s2 = (p - root)/4;
     // s2 will always be smaller because of the (-/+) above
-    return ([s2, s1]);
+    return ([s1, s2].sort());
 }
 
 
